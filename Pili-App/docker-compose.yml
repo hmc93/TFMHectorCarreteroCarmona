@@ -1,0 +1,28 @@
+version: "3"
+services:
+  client:
+    container_name: client
+    restart: always
+    build: ./web-client
+    ports: 
+      - "3000:3000"
+    depends_on: 
+      - server
+  server:
+    container_name: server
+    restart: always
+    build: ./node-server
+    ports: 
+      - "80:80"
+    depends_on: 
+      - mongo
+  mongo:
+    container_name: mongo_database
+    image: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - data-volume:/data/db
+volumes:
+  data-volume:

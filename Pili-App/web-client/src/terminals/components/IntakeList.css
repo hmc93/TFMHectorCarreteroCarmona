@@ -1,0 +1,25 @@
+/* table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  } */
+.thead {
+  display: contents;
+}
+.noBorderCell {
+  border: none;
+}
+
+.tableCorner {
+  border-top: 1px solid #ffffff; 
+  border-right: 1px solid #ffffff;
+}
+
+.buttonAddRow {
+  color: white !important;
+}
+
+.buttonBottom {
+  margin-right: 1rem;
+  color: white !important;
+}

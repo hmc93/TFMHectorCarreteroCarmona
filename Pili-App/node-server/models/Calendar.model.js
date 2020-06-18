@@ -1,0 +1,1 @@
+//Esto por ahora no hace falta, pero lo ideal sería definir un schema también para el calendario.

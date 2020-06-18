@@ -1,0 +1,28 @@
+ difference(){
+        rotate([0,0,n])
+        cube([diametro-grosorlateral,grosorcajon,altura],    center=true);
+        rotate([0,0,n])
+        translate([diametro/2-grosorlateral,0,0])
+        cube([diametro-grosorlateral,grosorcajon,altura],center=true);
+    }
+
+
+
+
+    SECTORES?
+
+       difference(){ 
+   sector(h=altura, d=diametro, a1=n-10, a2=n+10, $fn=100, center=true);
+   sector(h=altura, d=diametrointerior, a1=n-5, a2=n+5, $fn=100, center=true);
+   }  
+
+
+
+    difference(){
+        translate([0,0,-(espacioInfCarcasa+grosorInfCarcasa)])
+        cylinder(h=alturaTotalCarcasa, d=diametroCarcasa, $fn=100);
+        translate([0,0,-espacioInfCarcasa])
+        cylinder(h=alturaTotalCarcasa-grosorInfCarcasa-grosorSupCarcasa, d=diametroCarcasa-grosorLatCarcasa, $fn=100);
+        huecoTapa();
+        
+    }
